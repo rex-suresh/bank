@@ -56,13 +56,12 @@
           }
       ],
       "max-statements": "warn",
-    //   "quote-props": ["warn", "as-needed"],
       "no-console": "warn",
       "no-else-return": "error",
       "no-eval": "error",
       "no-implicit-globals": "error",
       "prefer-const": "error",
-      "no-magic-numbers": "error",
+      "no-magic-numbers": "warn",
       "no-process-exit": "error",
       "no-process-env": "error",
       "no-return-assign": "error",
@@ -94,5 +93,17 @@
               "max": 1
           }
       ]
-  }
+  },
+  "overrides": [
+    {
+        "files": [
+            "test*.js"
+        ],
+        "rules": {
+            "max-len": "warn",
+            "no-magic-numbers": "off",
+            "max-statements": "off"
+        }
+    }
+    ]
 }

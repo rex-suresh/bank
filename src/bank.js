@@ -2,7 +2,7 @@ class Bank {
   #accounts;
   constructor(accounts) {
     this.#accounts = accounts;
-  };
+  }
 
   transfer(senderId, receiverId, amount) {
     const sender = this.#accounts[senderId];
@@ -14,7 +14,7 @@ class Bank {
       return {transfer: true, status: true, senderId, receiverId};
     }
     return {transfer: true, status: false, senderId, receiverId};
-  };
+  }
 
   debit(accountId, amount) {
     const account = this.#accounts[accountId];
@@ -24,7 +24,7 @@ class Bank {
       return {debit: true, status: true, accountId};
     }
     return {debit: true, status: false, accountId};
-  };
+  }
 
   credit(accountId, amount) {
     const account = this.#accounts[accountId];
@@ -34,7 +34,7 @@ class Bank {
       return {credit: true, status: true, accountId};
     }
     return {credit: true, status: false, accountId};
-  };
+  }
 }
 
 exports.Bank = Bank;

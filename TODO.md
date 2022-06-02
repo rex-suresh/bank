@@ -1,5 +1,4 @@
 # BANK
-
 ### TODO
   
   - [ ] A bank entity to make -
